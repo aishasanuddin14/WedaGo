@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -24,281 +25,271 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* ===============================
-       TOKENS GLOBAL & RESET
-       =============================== */
-    :root{
-      /* Brand & utilitas */
-      --wg-green:#01A532;
-      --wg-green-dk:#0B6A2B;
-      --wg-dark:#065f46;
-      --wg-gray:#6B7280;
-      --wg-mid:#9CA3AF;
-      --wg-light:#FFFFFF;
-      --wg-white:#FFFFFF;
-      --wg-border:#E5E7EB;
-      --wg-shadow:0 4px 14px rgba(0,0,0,.08);
-      --radius:14px;
+    
+/* ===============================
+   TOKENS GLOBAL & RESET
+   =============================== */
+:root{
+  /* Brand & utilitas */
+  --wg-green:#01A532;
+  --wg-green-dk:#0B6A2B;
+  --wg-dark:#065f46;
+  --wg-gray:#6B7280;
+  --wg-mid:#9CA3AF;
+  --wg-light:#FFFFFF;
+  --wg-white:#FFFFFF;
+  --wg-border:#E5E7EB;
+  --wg-shadow:0 4px 14px rgba(0,0,0,.08);
+  --radius:14px;
 
-      /* Floating Pill Nav */
-      --pill-bg: rgba(255,255,255,.85);
-      --pill-bd: rgba(17,24,39,.08);
-      --shadow-pill: 0 12px 30px rgba(0,0,0,.12);
-    }
+  /* Floating Pill Nav */
+  --pill-bg: rgba(255,255,255,.85);
+  --pill-bd: rgba(17,24,39,.08);
+  --shadow-pill: 0 12px 30px rgba(0,0,0,.12);
+}
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--wg-dark);
-      background:var(--wg-light);
-      -webkit-tap-highlight-color:transparent;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      text-rendering:optimizeLegibility;
-    }
-    a{color:inherit;text-decoration:none}
-    img{display:block;max-width:100%;height:auto}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--wg-dark);
+  background:var(--wg-light);
+  -webkit-tap-highlight-color:transparent;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-    /* Kontainer app (maks 420px agar mirip ponsel) */
-    .wg-app{width:100%;max-width:420px;margin:0 auto;padding-bottom:calc(78px + env(safe-area-inset-bottom));overflow-x:hidden}
+/* Kontainer app (maks 420px agar mirip ponsel) */
+.wg-app{width:100%;max-width:420px;margin:0 auto;padding-bottom:calc(78px + env(safe-area-inset-bottom));overflow-x:hidden}
 
-    /* ===============================
-       HEADER (opsional, disiapkan)
-       =============================== */
-    header.wg-header{position:sticky;top:0;z-index:50;background:var(--wg-white);box-shadow:var(--wg-shadow)}
-    .wg-header__bar{height:56px;display:flex;align-items:center;gap:10px;padding:8px 12px}
-    .wg-brand{display:flex;align-items:center;justify-content:center;border:none;background:transparent;padding:0}
-    .wg-brand .brand-logo{height:36px;width:auto;object-fit:contain}
-    .wg-search{display:flex;align-items:center;gap:8px;flex:1;background:var(--wg-light);border:1px solid var(--wg-border);border-radius:999px;padding:9px 12px}
-    .wg-search input{border:0;background:transparent;outline:none;width:100%;font-size:14px}
-    .wg-ico-btn{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--wg-border);background:#fff}
+/* ===============================
+   HEADER
+   =============================== */
+header.wg-header{position:sticky;top:0;z-index:50;background:var(--wg-white);box-shadow:var(--wg-shadow)}
+.wg-header__bar{height:56px;display:flex;align-items:center;gap:10px;padding:8px 12px}
+.wg-brand{display:flex;align-items:center;justify-content:center;border:none;background:transparent;padding:0}
+.wg-brand .brand-logo{height:36px;width:auto;object-fit:contain}
+.wg-search{display:flex;align-items:center;gap:8px;flex:1;background:var(--wg-light);border:1px solid var(--wg-border);border-radius:999px;padding:9px 12px}
+.wg-search input{border:0;background:transparent;outline:none;width:100%;font-size:14px}
+.wg-ico-btn{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--wg-border);background:#fff}
 
-    /* ===============================
-       LAYOUT
-       =============================== */
-    main{padding:12px}
-    .wg-section{margin-top:14px}
-    .wg-card{background:var(--wg-white);border-radius:var(--radius);box-shadow:var(--wg-shadow)}
-    .wg-pad{padding:12px}
+/* ===============================
+   LAYOUT
+   =============================== */
+main{padding:12px}
+.wg-section{margin-top:14px}
+.wg-card{background:var(--wg-white);border-radius:var(--radius);box-shadow:var(--wg-shadow)}
+.wg-pad{padding:12px}
 
-    /* ===============================
-       HERO SLIDER
-       =============================== */
-    .wg-hero{position:relative;overflow:hidden;border-radius:var(--radius);height:220px;background:#e5ffe8;box-shadow:var(--wg-shadow);touch-action:pan-y}
-    .wg-hero__track{display:flex;height:100%;transition:transform .45s ease;will-change:transform}
-    .wg-hero.dragging .wg-hero__track{transition:none}
-    .wg-slide{min-width:100%;height:100%;position:relative;flex:0 0 100%}
-    .wg-slide__img{position:absolute;inset:0}
-    .wg-slide__img img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
-    .wg-slide__content{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:14px;color:#0a4220}
-    .wg-badge{display:inline-block;padding:6px 12px;border-radius:999px;font-weight:800;background:var(--wg-green);color:#fff;font-size:13px;letter-spacing:.2px}
-    .wg-hero__slogan{margin-top:8px;font-size:13px;background:rgba(255,255,255,.82);padding:6px 12px;border-radius:999px}
+/* ===============================
+   HERO SLIDER (versi fix)
+   =============================== */
+.wg-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  height: 220px; /* tinggi fix hero */
+  background: #e5ffe8;
+  box-shadow: var(--wg-shadow);
+  touch-action: pan-y;
+}
+.wg-hero__track {
+  display: flex;
+  height: 100%;
+  transition: transform .45s ease;
+  will-change: transform;
+}
+.wg-hero.dragging .wg-hero__track{ transition: none; }
 
-    /* ===============================
-       WALLET v2
-       =============================== */
-    .wg-wallet{border-radius:16px;box-shadow:var(--wg-shadow);background:#fff;padding:12px}
-    .wg-wallet__row{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;align-items:center;gap:10px}
-    .wg-wallet__saldo{display:flex;flex-direction:column;gap:4px}
-    .wg-balance-chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;color:#065f46;background:#e8f9ef;border:1px solid #c9f0d8}
-    .wg-balance-amt{margin:2px 0 0;font:800 16px/1 "Poppins",sans-serif;letter-spacing:.2px}
-    .wg-balance-sub{margin:6px 0 0;font-size:12px;color:var(--wg-gray)}
-    .wg-wallet__action{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#0B6A2B;text-decoration:none}
-    .wg-ico{width:34px;height:34px;display:grid;place-items:center;background:#eaf9f0;border-radius:50%}
-    .wg-ico svg{width:18px;height:18px}
+.wg-slide {
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+  border-radius: inherit;
+  overflow: hidden;
+}
+.wg-slide__img {
+  position: absolute;
+  inset: 0;
+}
+.wg-slide__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: inherit;
+}
+/* Overlay konten penuh */
+.wg-slide__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* slogan di tengah */
+  align-items: center;
+  text-align: center;
+  padding: 14px;
+  color: #0a4220;
+  pointer-events: none;
+}
+/* Badge turun ke bawah */
+.wg-slide__content .wg-badge {
+  margin-top: auto;
+  margin-bottom: 14px;
+  pointer-events: auto;
+}
+/* Style badge & slogan */
+.wg-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #01a532, #0B6A2B);
+  font-size: 13px;
+  letter-spacing: .2px;
+}
+.wg-hero__slogan {
+  margin-top: 8px;
+  font-size: 13px;
+  background: rgba(255,255,255,.82);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
 
-    /* ===============================
-       GRID MENU (4 kolom)
-       =============================== */
-    .wg-menu{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-    .wg-menu a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:10px;border:1px solid var(--wg-border);background:var(--wg-white);border-radius:var(--radius);box-shadow:var(--wg-shadow);text-align:center;min-height:90px;transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease, background-color .12s ease}
-    .wg-menu .wg-menu-ico{width:60px;height:60px;object-fit:contain;border:none;border-radius:10px;padding:2px;background:#fff;box-shadow:none}
-    .wg-menu a span{font-size:11px;line-height:1.05;font-weight:600}
-    .wg-menu a:hover,.wg-menu a:focus-visible,.wg-menu a.is-touch{transform:translateY(-1px);border-color:#A7F3D0;background:#F0FDF4;box-shadow:0 10px 24px rgba(1,165,50,.18);outline:none}
+/* ===============================
+   WALLET v2
+   =============================== */
+.wg-wallet{border-radius:16px;box-shadow:var(--wg-shadow);background:#fff;padding:12px}
+.wg-wallet__row{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;align-items:center;gap:10px}
+.wg-wallet__saldo{display:flex;flex-direction:column;gap:4px}
+.wg-balance-chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;color:#065f46;background:#e8f9ef;border:1px solid #c9f0d8}
+.wg-balance-amt{margin:2px 0 0;font:800 16px/1 "Poppins",sans-serif;letter-spacing:.2px}
+.wg-balance-sub{margin:6px 0 0;font-size:12px;color:var(--wg-gray)}
+.wg-wallet__action{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;font-weight:600;color:#0B6A2B;text-decoration:none}
+.wg-ico{width:34px;height:34px;display:grid;place-items:center;background:#eaf9f0;border-radius:50%}
+.wg-ico svg{width:18px;height:18px}
 
-    /* ===============================
-       PESAN CEPAT (slider horizontal)
-       =============================== */
-    .wg-sec-head{display:flex;align-items:center;justify-content:space-between;margin:0 0 8px}
-    .wg-sec-head h3{margin:0;font-size:16px}
-    .wg-link{font-size:12px;color:var(--wg-green);font-weight:800}
-    .wg-quick-slider{display:flex;gap:12px;overflow-x:auto;padding:6px 2px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
-    .wg-quick-slider::-webkit-scrollbar{display:none}
-    .wg-new-item{min-width:72px;flex:0 0 auto;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:8px}
-    .wg-new-icon{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--wg-border);background:#fff;box-shadow:var(--wg-shadow);font-size:22px;line-height:1}
-    .wg-new-item span{font-size:11.5px;font-weight:600;line-height:1.2;color:var(--wg-dark);text-align:center}
+/* ===============================
+   GRID MENU (4 kolom)
+   =============================== */
+.wg-menu{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.wg-menu a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:10px;border:1px solid var(--wg-border);background:var(--wg-white);border-radius:var(--radius);box-shadow:var(--wg-shadow);text-align:center;min-height:90px;transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease, background-color .12s ease}
+.wg-menu .wg-menu-ico{width:60px;height:60px;object-fit:contain;border:none;border-radius:10px;padding:2px;background:#fff;box-shadow:none}
+.wg-menu a span{font-size:11px;line-height:1.05;font-weight:600}
+.wg-menu a:hover,.wg-menu a:focus-visible,.wg-menu a.is-touch{transform:translateY(-1px);border-color:#A7F3D0;background:#F0FDF4;box-shadow:0 10px 24px rgba(1,165,50,.18);outline:none}
 
-    /* ===============================
-       KATEGORI PILIHAN: Segmented Pill + View Toggle
-       =============================== */
-    .home-section-head{display:flex;align-items:center;justify-content:space-between;margin:12px 0 8px}
-    .home-section-head h2{margin:0;font-size:17px;font-weight:800}
+/* ===============================
+   PESAN CEPAT (slider horizontal)
+   =============================== */
+.wg-sec-head{display:flex;align-items:center;justify-content:space-between;margin:0 0 8px}
+.wg-sec-head h3{margin:0;font-size:16px}
+.wg-link{font-size:12px;color:var(--wg-green);font-weight:800}
+.wg-quick-slider{display:flex;gap:12px;overflow-x:auto;padding:6px 2px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.wg-quick-slider::-webkit-scrollbar{display:none}
+.wg-new-item{min-width:72px;flex:0 0 auto;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:8px}
+.wg-new-icon{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--wg-border);background:#fff;box-shadow:var(--wg-shadow);font-size:22px;line-height:1}
+.wg-new-item span{font-size:11.5px;font-weight:600;line-height:1.2;color:var(--wg-dark);text-align:center}
 
-    .seg{display:flex;background:#fff;border:1px solid var(--wg-border);border-radius:999px;overflow:hidden}
-    .seg button{padding:6px 10px;border:none;background:transparent;cursor:pointer;font-size:12px;color:#6B7280}
-    .seg button[aria-pressed="true"]{color:var(--wg-green-dk);font-weight:700}
+/* ===============================
+   KATEGORI PILIHAN
+   =============================== */
+.home-section-head{display:flex;align-items:center;justify-content:space-between;margin:12px 0 8px}
+.home-section-head h2{margin:0;font-size:17px;font-weight:800}
+.seg{display:flex;background:#fff;border:1px solid var(--wg-border);border-radius:999px;overflow:hidden}
+.seg button{padding:6px 10px;border:none;background:transparent;cursor:pointer;font-size:12px;color:#6B7280}
+.seg button[aria-pressed="true"]{color:var(--wg-green-dk);font-weight:700}
+.segpill{--seg-count:3; --seg-index:0;position:relative; display:grid; grid-auto-flow:column; grid-auto-columns:1fr;gap:0; padding:4px; border:1px solid var(--wg-border); border-radius:999px;background:#fff; box-shadow:var(--wg-shadow);}
+.segpill__btn{position:relative; z-index:1;display:flex; align-items:center; justify-content:center; gap:8px;padding:8px 12px; border:none; background:transparent; border-radius:999px;font:700 12.5px/1.1 "Poppins",system-ui,sans-serif; color:#6B7280; cursor:pointer;}
+.segpill__btn .ico{font-size:14px}
+.segpill__btn.active{ color:var(--wg-green-dk) }
+.segpill__slider{position:absolute; left:4px; top:4px; bottom:4px;width:calc((100% - 8px)/var(--seg-count)); border-radius:999px;background:#E8F9EF; box-shadow:inset 0 1px 0 rgba(0,0,0,.03);transform:translateX(calc(var(--seg-index)*100%));transition:transform .22s ease, width .22s ease;}
 
-    .segpill{
-      --seg-count:3; --seg-index:0;
-      position:relative; display:grid; grid-auto-flow:column; grid-auto-columns:1fr;
-      gap:0; padding:4px; border:1px solid var(--wg-border); border-radius:999px;
-      background:#fff; box-shadow:var(--wg-shadow);
-    }
-    .segpill__btn{
-      position:relative; z-index:1;
-      display:flex; align-items:center; justify-content:center; gap:8px;
-      padding:8px 12px; border:none; background:transparent; border-radius:999px;
-      font:700 12.5px/1.1 "Poppins",system-ui,sans-serif; color:#6B7280; cursor:pointer;
-    }
-    .segpill__btn .ico{font-size:14px}
-    .segpill__btn.active{ color:var(--wg-green-dk) }
-    .segpill__slider{
-      position:absolute; left:4px; top:4px; bottom:4px;
-      width:calc((100% - 8px)/var(--seg-count)); border-radius:999px;
-      background:#E8F9EF; box-shadow:inset 0 1px 0 rgba(0,0,0,.03);
-      transform:translateX(calc(var(--seg-index)*100%));
-      transition:transform .22s ease, width .22s ease;
-    }
+/* ===============================
+   LIST/GRID/MASONRY CONTAINER + CARD
+   =============================== */
+#homeList.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+#homeList.list{display:flex;flex-direction:column;gap:14px;padding-inline:14px}
+#homeList.masonry{column-count:2;column-gap:16px}
+#homeList.masonry .home-card{break-inside:avoid;margin-bottom:16px}
+.home-card{position:relative;background:var(--wg-white);border:1px solid rgba(17,24,39,.08);border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.home-card img{width:100%;height:140px;object-fit:cover;display:block}
+.home-card .body{padding:10px}
+.home-card .name{margin:0 0 4px;font-size:14.5px;line-height:1.2;font-weight:900;letter-spacing:.1px}
+.home-card .desc{margin:0;color:#6B7280;font-size:12.5px;line-height:1.35;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis}
+/* List view khusus */
+#homeList.list .home-card a{display:flex;align-items:center;gap:12px;padding:12px}
+#homeList.list .home-card img{width:84px;height:84px;object-fit:cover;border-radius:12px;flex:0 0 auto}
+#homeList.list .home-card .body{flex:1;min-width:0;padding:0}
+#homeList.list .home-card .name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#homeList.list .home-card .meta{margin-top:6px;display:flex;gap:8px;align-items:center;font-size:12px;color:var(--wg-green-dk)}
 
-    /* ===============================
-       LIST/GRID/MASONRY CONTAINER + CARD
-       =============================== */
-    #homeList.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    #homeList.list{display:flex;flex-direction:column;gap:14px;padding-inline:14px}
-    #homeList.masonry{column-count:2;column-gap:16px}
-    #homeList.masonry .home-card{break-inside:avoid;margin-bottom:16px}
+/* ===============================
+   Floating Pill Nav (WedaGo)
+   =============================== */
+nav.wg-tabbar{display:none !important}
+.wg-fabnav{
+  position:fixed; left:50%; bottom:max(12px, env(safe-area-inset-bottom));
+  transform:translateX(-50%);
+  display:flex; gap:8px; align-items:center;
+  padding:6px; border-radius:999px;
+  backdrop-filter: blur(10px);
+  background:var(--pill-bg); border:1px solid var(--pill-bd);
+  box-shadow: var(--shadow-pill);
+  z-index: 1000; max-width: 520px; width:calc(100% - 24px); justify-content:space-around;
+}
+.wg-fabnav__item{
+  --size:44px;
+  display:flex; align-items:center; gap:8px;
+  height:var(--size); padding:0 10px; border-radius:999px;
+  color:var(--wg-green-dk); text-decoration:none; font-weight:700; font-size:12px;
+  transition: background .18s ease, transform .12s ease, color .18s ease, padding .18s ease;
+  position:relative; flex:1 1 auto; min-width:44px;
+}
+.wg-fabnav__label{ max-width:120px; white-space:nowrap }
+.wg-fabnav__item:focus-visible,.wg-fabnav__item:hover{ transform:translateY(-1px) }
+.wg-fabnav__item.active{ background:#E8F9EF; color:#0B6A2B; padding:0 14px }
+.wg-fabnav__item svg{ width:22px; height:22px; display:block }
 
-    .home-card{position:relative;background:var(--wg-white);border:1px solid rgba(17,24,39,.08);border-radius:16px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.08)}
-    .home-card img{width:100%;height:140px;object-fit:cover;display:block}
-    .home-card .body{padding:10px}
-    .home-card .name{margin:0 0 4px;font-size:14.5px;line-height:1.2;font-weight:900;letter-spacing:.1px}
-    .home-card .desc{margin:0;color:#6B7280;font-size:12.5px;line-height:1.35;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis}
-
-    /* List view khusus */
-    #homeList.list .home-card a{display:flex;align-items:center;gap:12px;padding:12px}
-    #homeList.list .home-card img{width:84px;height:84px;object-fit:cover;border-radius:12px;flex:0 0 auto}
-    #homeList.list .home-card .body{flex:1;min-width:0;padding:0}
-    #homeList.list .home-card .name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    #homeList.list .home-card .meta{margin-top:6px;display:flex;gap:8px;align-items:center;font-size:12px;color:var(--wg-green-dk)}
-
-    /* ===============================
-       TABBAR / FOOTER NAV (diganti fabnav)
-       =============================== */
-    nav.wg-tabbar{display:none !important}
-
-    /* ===============================
-       Floating Pill Nav (WedaGo)
-       =============================== */
-    .wg-fabnav{
-      position:fixed; left:50%; bottom: max(12px, env(safe-area-inset-bottom));
-      transform:translateX(-50%);
-      display:flex; gap:8px; align-items:center;
-      padding:6px; border-radius:999px;
-      backdrop-filter: blur(10px);
-      background:var(--pill-bg); border:1px solid var(--pill-bd);
-      box-shadow: var(--shadow-pill);
-      z-index: 1000; max-width: 480px; width:95%; justify-content:space-around;
-    }
-    .wg-fabnav__item{
-      --size:44px;
-      display:flex; align-items:center; gap:8px;
-      height:var(--size); padding:0 10px; border-radius:999px;
-      color:var(--wg-green-dk); text-decoration:none; font-weight:700; font-size:12px;
-      transition: background .18s ease, transform .12s ease, color .18s ease, padding .18s ease;
-      position:relative;
-    }
-    .wg-fabnav__label{ max-width:120px; white-space:nowrap }
-
-    .wg-fabnav__item:focus-visible,.wg-fabnav__item:hover{ transform:translateY(-1px) }
-    .wg-fabnav__item.active{ background:#E8F9EF; color:#0B6A2B; padding:0 14px }
-
-    /* ===============================
-       RESPONSIVE & PREFERS-REDUCED-MOTION
-       =============================== */
-    @media (max-width:360px){
-      main{padding:10px}
-      .wg-menu{gap:12px}
-      .wg-menu a{padding:8px;min-height:86px}
-      .wg-menu .wg-menu-ico{width:56px;height:56px}
-      .home-card img{height:128px}
-      #homeList.list .home-card img{width:78px;height:78px}
-      .wg-fabnav__item{ --size:42px; font-size:11.5px }
-    }
-    @media (prefers-reduced-motion:reduce){
-      .wg-menu a,.wg-hero__track{transition:none!important}
-    }
-    :focus-visible { outline: 2px solid #01A532; outline-offset: 2px; }
-.wg-fabnav__item:focus-visible { box-shadow: 0 0 0 3px rgba(1,165,50,.25); }
-.is-hidden { display:none !important; }
-@media (max-width:480px){
-  :root{ --wg-shadow: 0 2px 8px rgba(0,0,0,.10); }
-  .home-card{ box-shadow: 0 3px 10px rgba(0,0,0,.06); }
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width:360px){
+  main{padding:10px}
+  .wg-menu{gap:12px}
+  .wg-menu a{padding:8px;min-height:86px}
+  .wg-menu .wg-menu-ico{width:56px;height:56px}
+  .home-card img{height:128px}
+  #homeList.list .home-card img{width:78px;height:78px}
+  .wg-fabnav__item{ --size:42px; font-size:11.5px }
 }
 @media (prefers-reduced-motion:reduce){
+  .wg-menu a,.wg-hero__track{transition:none!important}
   .segpill__slider, .wg-fabnav__item, .wg-menu a { transition:none !important; }
 }
+:focus-visible { outline: 2px solid #01A532; outline-offset: 2px; }
+.wg-fabnav__item:focus-visible { box-shadow: 0 0 0 3px rgba(1,165,50,.25); }
+.is-hidden { display:none !important; }
+
 /* Safe gutter global */
-.wg-app { 
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-/* Section umum tetap ikut gutter */
-.wg-section { 
-  margin-top: 14px; 
-}
-
-/* Hero, menu, dan daftar pakai radius & tidak nempel tepi */
-.wg-hero,
-.wg-menu,
-#homeList { 
-  border-radius: 16px;
-}
-
-/* Grid/list jangan mepet */
-.wg-menu { 
-  padding-inline: 0; 
-  gap: 14px; 
-}
-
-/* List view khusus: sudah ada padding, pastikan konsisten */
-#homeList.list { 
-  padding-inline: 16px; 
-}
-
-/* Layar kecil, tetap ada ruang bernapas */
+.wg-app { padding-left:16px; padding-right:16px }
+.wg-section { margin-top:14px }
+.wg-hero, .wg-menu, #homeList { border-radius:16px }
+.wg-menu { padding-inline:0; gap:14px }
+#homeList.list { padding-inline:16px }
 @media (max-width:360px){
-  .wg-app { padding-left: 14px; padding-right: 14px; }
-  #homeList.list { padding-inline: 14px; }
-}
-.wg-fabnav {
-  max-width: 520px;   /* beri ruang lebih */
-  width: calc(100% - 24px);
-  overflow: visible;  /* jangan potong anak */
+  .wg-app { padding-left:14px; padding-right:14px }
+  #homeList.list { padding-inline:14px }
 }
 
-.wg-fabnav__item {
-  flex: 1 1 auto;
-  min-width: 44px;    /* cegah menciut nol */
-  gap: 8px;
-}
 
-.wg-fabnav__label {
-  max-width: 120px;   /* label aktif tampil */
-  white-space: nowrap;
-}
 
-/* Ikon pastikan ukuran tetap */
-.wg-fabnav__item svg { width: 22px; height: 22px; display:block }
-
-/* Pastikan tidak tertutup konten lain */
-.wg-fabnav { z-index: 1000; }
-
-    
-    
     
   </style>
 </head>
@@ -323,8 +314,8 @@
                    fetchpriority="high" decoding="async" loading="eager" />
             </div>
             <div class="wg-slide__content">
-              <div class="wg-badge">PANDUAN MITRA</div>
-              <div class="wg-hero__slogan">Klik untuk mulai</div>
+             
+              <div class="wg-hero__slogan">Panduan Menjadi Mitra</div>
             </div>
           </a>
 
@@ -756,7 +747,7 @@
 
       function start(){
         if (!opts || !opts.autoplay || hidden) return;
-        stop(); timer = setInterval(() => { if (!dragging) next(); }, (opts.interval||3000));
+        stop(); timer = setInterval(() => { if (!dragging) next(); }, (opts.interval||10000));
       }
       function stop(){ if (timer) { clearInterval(timer); timer=null; } }
 
